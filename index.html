@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TRACKS ADVENTURE SAFARIS & LODGES</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <meta name="theme-color" content="#7A5230">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <img src="images/logo.png" alt="TRACKS logo" class="logo">
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="safaris.html">Safaris</a>
+        <a href="about.html">About Us</a>
+        <a href="terms.html">Terms</a>
+        <a href="#contact" class="btn small">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="images/hero.jpg" alt="Safari hero" class="hero-img">
+    <div class="hero-overlay">
+      <h1>TRACKS ADVENTURE SAFARIS & LODGES</h1>
+      <p class="slogan">Life is a safari, let's conquer it together.</p>
+      <div class="hero-cta">
+        <a href="safaris.html" class="btn primary">Book A Safari</a>
+        <button id="watch-video" class="btn ghost">Watch Video</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap featured">
+    <h2>Featured Safaris</h2>
+    <div id="safari-cards" class="card-grid"></div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <img src="images/logo.png" class="logo-small" alt="Tracks Logo">
+      <div class="footer-contact">
+        <p>Email: <a href="mailto:tracksadventuresafari2016@gmail.com">tracksadventuresafari2016@gmail.com</a></p>
+      </div>
+      <div class="copyright">© <span id="year"></span> TRACKS ADVENTURE SAFARIS & LODGES</div>
+    </div>
+  </footer>
+
+  <!-- Video Modal -->
+  <div id="video-modal" class="modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" id="close-video" aria-label="Close video">&times;</button>
+      <div class="video-wrap">
+        <iframe id="hero-video" width="100%" height="480" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Booking Modal -->
+  <div id="booking-modal" class="modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" id="close-booking" aria-label="Close booking">&times;</button>
+      <div class="modal-content">
+        <h3>Book Safari</h3>
+        <form id="booking-form" name="booking" method="POST" data-netlify="true" netlify>
+          <input type="hidden" name="form-name" value="booking">
+          <label>Full name <input type="text" name="name" required></label>
+          <label>Email <input type="email" name="email" required></label>
+          <label>WhatsApp number <input type="text" name="whatsapp" placeholder="+267..." required></label>
+          <label>Package <input type="text" name="package" id="booking-package" readonly></label>
+          <label>Number of guests <input type="number" name="guests" min="1" value="2"></label>
+          <label>Preferred dates <input type="text" name="dates" placeholder="e.g. 12 June 2025 - 16 June 2025"></label>
+          <label>Special requests <textarea name="requests" rows="3"></textarea></label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Submit Booking</button>
+            <button type="button" id="whatsapp-send" class="btn ghost">Send via WhatsApp</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+:root{
+  --brown: #7A5230;
+  --green: #7FAA3C;
+  --olive: #556B2F;
+  --sand: #FAF7F2;
+  --white: #ffffff;
+  --muted: #9a8f86;
+  --max-width: 1100px;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,Arial,Helvetica,sans-serif;background:var(--sand);color:#2b2b2b;margin:0}
+.wrap{max-width:var(--max-width);margin:0 auto;padding:30px}
+.site-header{background:var(--brown);color:var(--white);padding:12px 0}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{height:56px}
+.main-nav a{color:#fff;margin-left:18px;text-decoration:none}
+.hero{position:relative;height:520px;overflow:hidden}
+.hero-img{width:100%;height:520px;object-fit:cover;display:block;filter:brightness(0.55)}
+.hero-overlay{position:absolute;left:0;top:0;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff;text-align:center;padding:20px}
+.hero-overlay h1{font-family:Playfair Display, serif;font-size:44px;letter-spacing:2px;margin:0 0 8px}
+.hero-overlay .slogan{margin-bottom:18px;color:#fff;opacity:0.95}
+.btn{display:inline-block;padding:10px 16px;border-radius:6px;background:var(--olive);color:#fff;border:none;text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;border:2px solid rgba(255,255,255,0.18)}
+.btn.small{padding:6px 10px;font-size:14px}
+.primary{background:var(--green)}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:18px}
+.safari-card{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,0.08)}
+.safari-card img{width:100%;height:160px;object-fit:cover}
+.card-body{padding:14px}
+.card-body h3{margin:0 0 6px}
+.card-body .meta{color:var(--muted);font-size:13px;margin-bottom:8px}
+.card-footer{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+.price{font-weight:700;color:var(--brown)}
+.site-footer{background:#fff;padding:20px 0;border-top:4px solid #f0eaea;margin-top:40px}
+.logo-small{height:40px}
+.modal{display:none;position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:1000;align-items:center;justify-content:center;padding:20px}
+.modal.active{display:flex}
+.modal-dialog{background:#fff;border-radius:8px;max-width:900px;width:100%;overflow:hidden;position:relative}
+.modal-close{position:absolute;right:10px;top:6px;border:none;background:transparent;font-size:26px;cursor:pointer}
+.video-wrap iframe{width:100%;height:480px}
+.modal-content{padding:18px}
+form label{display:block;margin:8px 0}
+form input, form textarea{width:100%;padding:10px;border:1px solid #ddd;border-radius:6px}
+.form-actions{display:flex;gap:8px;margin-top:12px}
+@media (max-width:768px){
+  .hero{height:380px}.hero-img{height:380px}
+  .hero-overlay h1{font-size:28px}
+  .video-wrap iframe{height:260px}
+  .header-inner{padding:6px}
+}
