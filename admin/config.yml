@@ -5,46 +5,32 @@ backend:
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
-site_url: "https://your-site.netlify.app"
-
 collections:
-  - name: "pages"
-    label: "Pages"
-    files:
-      - file: "about.html"
-        label: "About Page"
-        name: "about"
-        fields:
-          - {label: "Body (HTML)", name: "body", widget: "markdown"}
-      - file: "terms.html"
-        label: "Terms & Conditions"
-        name: "terms"
-        fields:
-          - {label: "Body (HTML)", name: "body", widget: "markdown"}
-
   - name: "safaris"
-    label: "Safaris"
+    label: "Safari Packages"
     folder: "content/safaris"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Image", name: "image", widget: "image"}
-      - {label: "Location", name: "location", widget: "string", required: false}
-      - {label: "Duration", name: "duration", widget: "string"}
-      - {label: "Price", name: "price", widget: "string"}
-      - {label: "Short description", name: "description", widget: "text"}
-      - {label: "Availability tag", name: "availability", widget: "select", options: ["Available","Few Spots Left","Fully Booked"], default: "Available"}
-      - {label: "Body (long description)", name: "body", widget: "markdown"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Price", name: "price", widget: "string" }
+      - { label: "Duration", name: "duration", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Hero Image", name: "heroImage", widget: "image" }
 
-  - name: "settings"
-    label: "Site Settings"
+  - name: "pages"
+    label: "Pages"
     files:
-      - file: "config/site.yml"
-        label: "Site Settings"
-        name: "site"
+      - file: "content/about.md"
+        label: "About Us"
+        name: "about"
         fields:
-          - {label: "Site title", name: "title", widget: "string", default: "TRACKS ADVENTURE SAFARIS & LODGES"}
-          - {label: "Hero image", name: "hero_image", widget: "image"}
-          - {label: "Hero video (YouTube embed URL)", name: "hero_video", widget: "string"}
-          - {label: "Contact email", name: "contact_email", widget: "string", default: "tracksadventuresafari2016@gmail.com"}
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - file: "content/terms.md"
+        label: "Terms & Conditions"
+        name: "terms"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
